@@ -225,7 +225,7 @@ async def handle_bluetooth():
             current_bpm = 0
             device = None
             
-            print("Scanning for Polar...")
+            print("Scanning for HRM...")
             async with aioble.scan(5000, interval_us=30000, window_us=30000, active=True) as scanner:
                 async for result in scanner:
                     if _HR_SERVICE_UUID in result.services():
